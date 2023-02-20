@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+h1,h2,h3,li, button, input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#root{
+    min-height: 100vh;
+   /*  background-color: rgb(72, 168, 247); */
+   background: linear-gradient(rgb(62, 101, 230), rgb(191, 95, 230));
+   
+}
+
+/* Home apge section */
+#home-page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+h1{
+    font-size: 50px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+}
+.card-container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.home-card{
+    width: 200px;
+    height: 280px;
+    border: 5px solid #1f53a0c2;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    background-color: #fff;
+    position: relative;
+}
+.pair-card{
+    width: 110px;
+    border: 5px solid #1f53a0c2;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    background-color: #fff;
+    
+}
+.pair-img{
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 0;
+}
+/* rules section of the home page*/
+.rule-container h2{
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.rule_list{
+    padding: 0 30px;
+}
+.rule_list li{
+    font-size: 18px;
+    margin: 10px 0;
+    color :  #fff;
+    font-size: 20px;
+}
+#start_btn{
+    width: 180px;
+    height: 45px;
+    border: none;
+    background-color: #1f53a0c2;
+    font-size: 22px;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+/* Game UI section */
+#game_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-utilities{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.GUI_btn{
+
+    width: 120px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(223, 171, 0);
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    
+
+}
+#rules_btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(223, 171, 0);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+.score_box{
+    height: 100%;
+    color: rgb(223, 171, 0);
+    font-weight: normal;
+    font-size: 20px;
+}
+#cards_box{
+    margin: 30px 0;
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.card-box{
+    position: relative;
+    width : 120px;
+    height: 160px;
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+.the_card{
+    
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all ease 0.5s;
+}
+.the_card.rotate{
+    transform: rotateY(-180deg);
+}
+.front_card{
+    border-radius: 5px;
+    border: 5px solid #1f53a0c2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #fff;
+}
+.back_card{
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #1f53a0c2;
+    
+}
+/* overlay for help rules section */
+.rules_overlay{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.rules_help{
+    padding: 50px;
+    width: 500px;
+    height: auto;
+    background-color: blueviolet;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+}
+.rules_help >h3{
+    margin: 20px 0;
+    font-size: 30px;
+}
+.rules_help > button{
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+    background-color: #1f53a0c2;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width : 1800px){
+    #cards_box{
+        width: 35%;
+    }
+}
+@media screen and (max-width : 1600px){
+    #cards_box{
+        width: 40%;
+    }
+}
+@media screen and (max-width : 1350px){
+    #cards_box{
+        width: 45%;
+    }
+}
+@media screen and (max-width : 1155px){
+    #cards_box{
+        width: 55%;
+    }
+}
+@media screen and (max-width : 960px){
+    #cards_box{
+        width: 65%;
+    }
+}
+@media screen and (max-width : 928px){
+    #cards_box{
+        width: 70%;
+    }
+}
+@media screen and (max-width : 750px){
+    #cards_box{
+        width: 85%;
+    }
+}
+@media screen and (max-width : 620px){
+    #cards_box{
+        width: 100%;
+    }
+    .thecard{
+        width: 105px;
+    }
+}
+@media screen and (max-width : 500px){
+    #cards_box{
+        width: 100%;
+    }
+    .home-card{
+        width: 160px;
+    }
+    .thecard{
+        width: 75px;
+        margin: 5px;
+    }
+}
+
+
